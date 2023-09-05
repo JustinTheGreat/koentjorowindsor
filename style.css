@@ -1,0 +1,201 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+/* Header */
+.title{
+    font-family: 'Lora';
+    text-align: center;
+    font-size: 2.8em;
+    font-weight: normal;
+    margin: 0;
+}
+
+.title_description{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin: 0;
+}
+
+header {
+    background-image: url('images/Testing.jpg');
+    background-size: cover;
+    background-position: 50% 47%;
+    padding: 30px;
+    color: white;
+    height: 11rem;
+    /*Flex box*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    padding: 15px;
+    text-align: center;
+}
+/* Header End */
+/* Navbar */
+@font-face {
+    font-family: 'Rieux Medium';
+    src: url('CeriseOpti-Regular.otf') format('woff');
+}
+.nav-list {
+    background-color: white;
+    overflow: hidden;
+    color : black;
+    font-family: 'Didot', serif;
+    list-style-type: none;
+    margin-top: 0.3em;
+    display: flex;  /* Flexbox for centering */
+    align-items: center;  /* Vertical centering */
+    justify-content: center;  /* Horizontal centering */
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;  /* Bottom border */
+    margin-top: 1em;
+}
+
+.nav-list li {
+    float: left;
+    margin-right: 2em;
+}
+
+.nav-list li a {
+    font-size: 1.1rem;
+    display: block;
+    color: #999999;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.nav-list li a:hover {
+    color: #CD0000;
+}
+/** Navbar End **/
+/** Gallery **/
+
+.slides {
+    padding: 0;
+    width: 609px;
+    height: 420px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.slides input { display: none; }
+
+.slide-container { display: block; }
+
+.slide {
+    top: 0;
+    opacity: 0;
+    width: 609px;
+    height: 420px;
+    display: block;
+    position: absolute;
+
+    /*transform: scale(0);*/
+    transform: translate(1,0);
+  
+  
+    transition: all .7s ease-in-out;
+}
+
+.slide img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.nav label {
+    width: 40px;
+    /*height: 60px;*/
+    height: 100%;
+    display: none;
+    position: absolute;
+    /*margin: auto;*/
+
+	  opacity: 0;
+    z-index: 9;
+    cursor: pointer;
+
+    transition: opacity .2s;
+
+    color: #FFF;
+    font-size: 40pt;
+    text-align: center;
+    line-height: 380px;
+    font-family: "Arial", sans-serif;
+    background-color: rgba(255, 255, 255, 0);
+    text-shadow: 0px 0px 15px rgb(119, 119, 119);
+}
+
+.slide:hover + .nav label { opacity: 0.5; }
+
+.nav label:hover { opacity: 1; }
+
+.nav .next { right: 0; }
+
+input:checked + .slide-container  .slide {
+    opacity: 1;
+
+    /*transform: scale(1);*/
+    /*transform: translate();*/
+    /*transform: scale(2,3);*/
+
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .nav label { display: block; }
+
+.nav-dots {
+	width: 100%;
+	bottom: 9px;
+	height: 11px;
+	display: block;
+	position: absolute;
+	text-align: center;
+}
+
+.nav-dots .nav-dot {
+	top: -5px;
+	width: 11px;
+	height: 11px;
+	margin: 0 4px;
+	position: relative;
+	border-radius: 100%;
+	display: inline-block;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-dots .nav-dot:hover {
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+input#img-1:checked ~ .nav-dots label#img-dot-1,
+input#img-2:checked ~ .nav-dots label#img-dot-2,
+input#img-3:checked ~ .nav-dots label#img-dot-3,
+input#img-4:checked ~ .nav-dots label#img-dot-4,
+input#img-5:checked ~ .nav-dots label#img-dot-5
+ {background: rgba(200, 200, 200, 0.8);}
+
+ .slideshow-backdrop {
+    background-color: #F6FBFF; /* light grey background */
+    padding: 20px; /* padding around the slideshow */
+    display: flex;
+    justify-content: center; /* center the slideshow horizontally */
+    align-items: center; /* center the slideshow vertically */
+  }
+ /** Gallery End **/
