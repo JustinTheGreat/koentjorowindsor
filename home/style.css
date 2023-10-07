@@ -18,7 +18,7 @@ body, html {
 }
 
 header {
-    background-image: url('images/Testing.jpg');
+    background-image: url('Testing.jpg');
     background-size: cover;
     background-position: 50% 47%;
     padding: 30px;
@@ -199,3 +199,10 @@ input#img-5:checked ~ .nav-dots label#img-dot-5
     align-items: center; /* center the slideshow vertically */
   }
  /** Gallery End **/
+ /** Paragraph Stuff **/
+
+.journey {
+    text-align: center;
+    font-size: 4em;
+    color:#494949;
+ }
